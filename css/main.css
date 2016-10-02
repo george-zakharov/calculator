@@ -1,0 +1,14 @@
+/*
+This is main stylesheet.
+
+@package: calculator
+@version: 1.0
+@author: wildwind | George Zakharov <george_zakharov@mail.ru>
+*/
+
+/*
+Common style
+*/
+.button-area {
+    margin-top: 40px;
+}
