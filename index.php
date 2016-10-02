@@ -1,3 +1,7 @@
+<?php
+require 'core/MathOperations.php';
+$math = new MathOperations();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Feedback Form</title>
+    <title>Calculator</title>
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom main stylesheet -->
@@ -20,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
-                <form class="form-group" role="form" id="form">
+                <form class="form-group" role="form" id="form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                     <!-- First operand input -->
                     <div class="col-sm-5 text-right">
                         <label for="firstOperand"></label>
@@ -45,7 +49,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <h3 class="text-center">Result</h3>
                         <div class="well">
-                            no data
+                            <?= MathOperations::$result; ?>
                         </div>
                     </div>
                     <!-- Calculate button -->
